@@ -1,0 +1,6 @@
+{
+  "name":"telegram-academy-holographic-navigator","private":true,"version":"1.0.0","type":"module",
+  "scripts":{"dev":"vite","build":"tsc --noEmit && vite build","typecheck":"tsc --noEmit"},
+  "dependencies":{"@react-spring/three":"^9.7.5","@react-three/drei":"^9.122.0","@react-three/fiber":"^8.17.10","@react-three/postprocessing":"^2.16.3","@use-gesture/react":"^10.3.1","framer-motion":"^12.23.24","lucide-react":"^0.545.0","postprocessing":"^6.37.8","react":"^18.3.1","react-dom":"^18.3.1","three":"^0.170.0","zustand":"^5.0.8"},
+  "devDependencies":{"@types/react":"^18.3.12","@types/react-dom":"^18.3.1","@vitejs/plugin-react":"^4.3.4","typescript":"^5.9.3","vite":"^6.1.0"}
+}

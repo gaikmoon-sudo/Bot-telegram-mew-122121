@@ -1,0 +1,431 @@
+{
+  "1": {
+    "title": "Introduction to C++",
+    "duration": "15 دقيقة",
+    "objective": "التعرف على C++ واستخداماتها وبنية أول برنامج.",
+    "theory": "C++ لغة برمجة عامة الاستخدام، قوية وعالية الأداء، وتستخدم في الألعاب والأنظمة والبرامج التي تحتاج أداءً وتحكمًا جيدًا بالموارد. يبدأ التنفيذ عادة من <code>main()</code>، وتستخدم <code>std::cout</code> للإخراج مع <code>&lt;iostream&gt;</code>.",
+    "simple": "🟢 main() = نقطة بداية البرنامج.\n🟢 std::cout = عرض النص.\n🟢 return 0 = إنهاء ناجح.",
+    "code": "<pre><code class=\"language-cpp\">#include &lt;iostream&gt;\n\nint main() {\n    std::cout &lt;&lt; \"Hello, C++!\";\n    return 0;\n}</code></pre>",
+    "examples": "اطبع اسمك وعُمرك، ثم جرّب طباعة سطرين باستخدام \n.",
+    "question": "أي جزء يمثل نقطة بداية تنفيذ برنامج C++؟",
+    "answers": [
+      [
+        "A",
+        "std::cout",
+        false
+      ],
+      [
+        "B",
+        "main()",
+        true
+      ],
+      [
+        "C",
+        "iostream",
+        false
+      ],
+      [
+        "D",
+        "return",
+        false
+      ]
+    ],
+    "explain": "الدالة main() هي نقطة البداية المعتادة لتنفيذ البرنامج."
+  },
+  "2": {
+    "title": "بيئة التطوير وتجهيز C++",
+    "duration": "20 دقيقة",
+    "objective": "فهم المحرر والمترجم وخطوات إنشاء وتشغيل مشروع C++.",
+    "theory": "تحتاج عادة إلى محرر للكود ومترجم Compiler يحول كود المصدر إلى برنامج قابل للتنفيذ. من المترجمات المعروفة GCC وClang وMSVC. الفكرة المهمة: تكتب ثم تترجم ثم تشغّل.",
+    "simple": "📝 تكتب الكود → ⚙️ المترجم يفحص ويترجم → ▶️ تشغّل البرنامج.",
+    "code": "<pre><code class=\"language-cpp\">#include &lt;iostream&gt;\nint main() {\n    std::cout &lt;&lt; \"My first project\";\n    return 0;\n}</code></pre>",
+    "examples": "أنشئ مشروعًا جديدًا، اكتب المثال، ابنِ المشروع ثم شغله. لاحظ الفرق بين خطأ الترجمة وخطأ التشغيل.",
+    "question": "ما وظيفة الـ Compiler؟",
+    "answers": [
+      [
+        "A",
+        "تصميم واجهة",
+        false
+      ],
+      [
+        "B",
+        "ترجمة كود المصدر إلى برنامج قابل للتنفيذ",
+        true
+      ],
+      [
+        "C",
+        "تخزين كلمات المرور",
+        false
+      ],
+      [
+        "D",
+        "إدارة Telegram",
+        false
+      ]
+    ],
+    "explain": "المترجم يحول كود المصدر إلى صيغة قابلة للتنفيذ مع فحص أخطاء كثيرة أثناء الترجمة."
+  },
+  "3": {
+    "title": "أول برنامج C++",
+    "duration": "20 دقيقة",
+    "objective": "فهم بنية البرنامج البسيط وكتابة أول رسالة.",
+    "theory": "البرنامج البسيط يحتوي على التضمينات ثم main() ثم الأوامر داخل الأقواس. تنتهي معظم التعليمات بفاصلة منقوطة ;.",
+    "simple": "فكر في main() كالغرفة التي تبدأ منها أوامر البرنامج.",
+    "code": "<pre><code class=\"language-cpp\">#include &lt;iostream&gt;\n\nint main() {\n    std::cout &lt;&lt; \"Hello World!\" &lt;&lt; std::endl;\n    return 0;\n}</code></pre>",
+    "examples": "غيّر النص إلى اسمك واطبع سطرين باستخدام std::endl أو \n.",
+    "question": "ما الرمز الذي ينهي معظم التعليمات؟",
+    "answers": [
+      [
+        "A",
+        ".",
+        false
+      ],
+      [
+        "B",
+        ";",
+        true
+      ],
+      [
+        "C",
+        ":",
+        false
+      ],
+      [
+        "D",
+        ",",
+        false
+      ]
+    ],
+    "explain": "الفاصلة المنقوطة ; تنهي معظم تعليمات C++."
+  },
+  "4": {
+    "title": "Syntax — قواعد كتابة C++",
+    "duration": "25 دقيقة",
+    "objective": "فهم الأقواس والفواصل المنقوطة والتعليقات وحساسية الأحرف.",
+    "theory": "Syntax هي قواعد كتابة اللغة. C++ حساسة لحالة الأحرف؛ age يختلف عن Age. تستخدم {} للكتل، و// للتعليق أحادي السطر، و/* */ للتعليق متعدد الأسطر.",
+    "simple": "الـ Syntax مثل قواعد اللغة: الفكرة قد تكون صحيحة لكن الصياغة الخاطئة تمنع المترجم من فهمها.",
+    "code": "<pre><code class=\"language-cpp\">#include &lt;iostream&gt;\nint main() {\n    // تعليق\n    std::cout &lt;&lt; \"Syntax\";\n    return 0;\n}</code></pre>",
+    "examples": "احذف ; من سطر وشاهد الخطأ، ثم أعدها. جرّب أيضًا تغيير main إلى Main.",
+    "question": "هل C++ حساسة لحالة الأحرف؟",
+    "answers": [
+      [
+        "A",
+        "نعم",
+        true
+      ],
+      [
+        "B",
+        "لا",
+        false
+      ],
+      [
+        "C",
+        "فقط التعليقات",
+        false
+      ],
+      [
+        "D",
+        "فقط Windows",
+        false
+      ]
+    ],
+    "explain": "نعم، أسماء المتغيرات والدوال في C++ تتأثر بحالة الأحرف."
+  },
+  "5": {
+    "title": "Variables — المتغيرات",
+    "duration": "30 دقيقة",
+    "objective": "إنشاء المتغيرات وإسناد القيم وتغييرها.",
+    "theory": "المتغير مكان مسمى في الذاكرة لتخزين قيمة. يجب تحديد نوعه مثل int أو double أو char أو bool، ويمكن تغيير قيمته أثناء التنفيذ.",
+    "simple": "المتغير مثل صندوق عليه اسم تضع فيه قيمة ويمكنك تحديثها.",
+    "code": "<pre><code class=\"language-cpp\">#include &lt;iostream&gt;\nint main() {\n    int age = 20;\n    age = 21;\n    std::cout &lt;&lt; age;\n    return 0;\n}</code></pre>",
+    "examples": "أنشئ score بقيمة 95، اطبعه، ثم غيّره إلى 100 واطبعه مرة أخرى.",
+    "question": "أي نوع مناسب لعدد صحيح مثل 25؟",
+    "answers": [
+      [
+        "A",
+        "int",
+        true
+      ],
+      [
+        "B",
+        "string",
+        false
+      ],
+      [
+        "C",
+        "bool",
+        false
+      ],
+      [
+        "D",
+        "void",
+        false
+      ]
+    ],
+    "explain": "int يستخدم عادة للأعداد الصحيحة دون جزء عشري."
+  },
+  "6": {
+    "title": "Data Types — أنواع البيانات",
+    "duration": "30 دقيقة",
+    "objective": "التعرف على الأنواع الأساسية واختيار المناسب.",
+    "theory": "من الأنواع الأساسية int للأعداد الصحيحة، double للعشرية، char لحرف واحد، bool للقيم المنطقية، وstd::string للنصوص.",
+    "simple": "عمر = int، سعر = double، حرف = char، نعم/لا = bool، اسم = string.",
+    "code": "<pre><code class=\"language-cpp\">#include &lt;iostream&gt;\n#include &lt;string&gt;\nint main() {\n    int age = 20;\n    double price = 19.99;\n    char grade = 'A';\n    bool active = true;\n    std::string name = \"Ali\";\n}</code></pre>",
+    "examples": "صمم بيانات طالب: الاسم والعمر والمعدل وحالة التسجيل، واختر النوع المناسب.",
+    "question": "أي نوع مناسب لقيمة عشرية مثل 3.14؟",
+    "answers": [
+      [
+        "A",
+        "int",
+        false
+      ],
+      [
+        "B",
+        "double",
+        true
+      ],
+      [
+        "C",
+        "char",
+        false
+      ],
+      [
+        "D",
+        "bool",
+        false
+      ]
+    ],
+    "explain": "double مناسب للأعداد التي تحتوي على جزء عشري."
+  },
+  "7": {
+    "title": "Input / Output — الإدخال والإخراج",
+    "duration": "30 دقيقة",
+    "objective": "قراءة بيانات المستخدم بـ cin وعرض النتائج بـ cout.",
+    "theory": "الإخراج يستخدم std::cout، والإدخال يستخدم std::cin لقراءة البيانات من لوحة المفاتيح ووضعها في متغير.",
+    "simple": "cout = البرنامج يتحدث. cin = البرنامج يستمع.",
+    "code": "<pre><code class=\"language-cpp\">#include &lt;iostream&gt;\nint main() {\n    int age;\n    std::cout &lt;&lt; \"Enter age: \";\n    std::cin &gt;&gt; age;\n    std::cout &lt;&lt; \"Age = \" &lt;&lt; age;\n}</code></pre>",
+    "examples": "اطلب العمر ثم اطبعه. في درس Strings ستتعلم إدخال النصوص والجمل بشكل أوسع.",
+    "question": "ما الأداة المستخدمة عادة لقراءة الإدخال؟",
+    "answers": [
+      [
+        "A",
+        "std::cin",
+        true
+      ],
+      [
+        "B",
+        "std::cout",
+        false
+      ],
+      [
+        "C",
+        "std::main",
+        false
+      ],
+      [
+        "D",
+        "std::read",
+        false
+      ]
+    ],
+    "explain": "std::cin هو تدفق الإدخال القياسي في C++."
+  },
+  "8": {
+    "title": "Operators — العمليات",
+    "duration": "35 دقيقة",
+    "objective": "استخدام العمليات الحسابية والمقارنة والمنطق والإسناد.",
+    "theory": "العمليات الحسابية تشمل + - * / %، والمقارنة == != < >، والمنطق && || !. تساعدك العمليات على بناء الحسابات والشروط.",
+    "simple": "Operator هو رمز يطلب من البرنامج إجراء عملية مثل الجمع أو المقارنة.",
+    "code": "<pre><code class=\"language-cpp\">int a = 10;\nint b = 3;\nint sum = a + b;\nint remainder = a % b;\nbool bigger = a &gt; b;</code></pre>",
+    "examples": "احسب مجموع وفارق وحاصل ضرب وباقي قسمة رقمين، ثم قارن بينهما.",
+    "question": "ما نتيجة 10 % 3؟",
+    "answers": [
+      [
+        "A",
+        "0",
+        false
+      ],
+      [
+        "B",
+        "1",
+        true
+      ],
+      [
+        "C",
+        "3",
+        false
+      ],
+      [
+        "D",
+        "10",
+        false
+      ]
+    ],
+    "explain": "% يعطي باقي القسمة الصحيحة؛ باقي 10 ÷ 3 هو 1."
+  },
+  "9": {
+    "title": "Conditional Statements — الجمل الشرطية",
+    "duration": "35 دقيقة",
+    "objective": "استخدام if وelse if وelse لاتخاذ القرارات.",
+    "theory": "if تنفذ فرعًا عند تحقق الشرط، وelse if للحالات الإضافية، وelse للحالة المتبقية.",
+    "simple": "اسأل البرنامج: هل الشرط صحيح؟ إذا نعم نفذ الفرع الأول، وإذا لا انتقل للفرع المناسب.",
+    "code": "<pre><code class=\"language-cpp\">int score = 85;\nif (score &gt;= 90) {\n    std::cout &lt;&lt; \"Excellent\";\n} else if (score &gt;= 60) {\n    std::cout &lt;&lt; \"Pass\";\n} else {\n    std::cout &lt;&lt; \"Fail\";\n}</code></pre>",
+    "examples": "حدد هل الرقم موجب أو سالب أو صفر، ثم أنشئ برنامج نجاح ورسوب.",
+    "question": "أي كلمة تمثل الفرع البديل؟",
+    "answers": [
+      [
+        "A",
+        "repeat",
+        false
+      ],
+      [
+        "B",
+        "else",
+        true
+      ],
+      [
+        "C",
+        "case",
+        false
+      ],
+      [
+        "D",
+        "next",
+        false
+      ]
+    ],
+    "explain": "else يمثل الفرع البديل عندما لا يتحقق الشرط السابق."
+  },
+  "10": {
+    "title": "Loops — الحلقات التكرارية",
+    "duration": "40 دقيقة",
+    "objective": "تكرار الأوامر باستخدام for وwhile.",
+    "theory": "الحلقات تقلل تكرار كتابة الكود. تستخدم for غالبًا عندما يكون عدد التكرارات واضحًا، وwhile عندما يرتبط التكرار بشرط.",
+    "simple": "بدل كتابة نفس الأمر عشر مرات، اطلب من الحلقة تنفيذه عشر مرات.",
+    "code": "<pre><code class=\"language-cpp\">for (int i = 1; i &lt;= 5; ++i) {\n    std::cout &lt;&lt; i &lt;&lt; \"\n\";\n}\n\nint n = 3;\nwhile (n &gt; 0) {\n    std::cout &lt;&lt; n &lt;&lt; \"\n\";\n    --n;\n}</code></pre>",
+    "examples": "اطبع 1 إلى 10، ثم الأعداد الزوجية 2 إلى 20، ثم نفذ عدًا تنازليًا بـ while.",
+    "question": "أي حلقة مناسبة غالبًا عندما تعرف عدد التكرارات؟",
+    "answers": [
+      [
+        "A",
+        "for",
+        true
+      ],
+      [
+        "B",
+        "if",
+        false
+      ],
+      [
+        "C",
+        "switch",
+        false
+      ],
+      [
+        "D",
+        "class",
+        false
+      ]
+    ],
+    "explain": "for مناسبة جدًا عندما تكون بداية ونهاية وعدد التكرارات معروفة."
+  },
+  "11": {
+    "title": "Arrays — المصفوفات",
+    "duration": "40 دقيقة",
+    "objective": "تخزين مجموعة من القيم والوصول إليها بالفهرس.",
+    "theory": "المصفوفة تخزن عدة عناصر من النوع نفسه. تبدأ الفهرسة من الصفر؛ في مصفوفة من 5 عناصر تكون الفهارس 0 إلى 4.",
+    "simple": "تخيل صف صناديق متجاورة، كل صندوق له رقم يبدأ من 0.",
+    "code": "<pre><code class=\"language-cpp\">int scores[5] = {90, 85, 70, 88, 95};\nstd::cout &lt;&lt; scores[0];\nfor (int i = 0; i &lt; 5; ++i) {\n    std::cout &lt;&lt; scores[i] &lt;&lt; \"\n\";\n}</code></pre>",
+    "examples": "أنشئ مصفوفة لخمسة أعمار واستخدم حلقة لطباعة كل عنصر. لاحظ حدود الفهرسة.",
+    "question": "ما فهرس أول عنصر في مصفوفة C++؟",
+    "answers": [
+      [
+        "A",
+        "0",
+        true
+      ],
+      [
+        "B",
+        "1",
+        false
+      ],
+      [
+        "C",
+        "-1",
+        false
+      ],
+      [
+        "D",
+        "5",
+        false
+      ]
+    ],
+    "explain": "فهرسة المصفوفات في C++ تبدأ من 0."
+  },
+  "12": {
+    "title": "Strings — النصوص",
+    "duration": "40 دقيقة",
+    "objective": "تخزين النصوص ودمجها وقراءة طولها.",
+    "theory": "يستخدم std::string للنصوص. يمكنك دمج النصوص بـ + ومعرفة طولها بـ size()، وقراءة جملة كاملة باستخدام std::getline.",
+    "simple": "النص سلسلة من الأحرف، وstring يوفر أدوات جاهزة للتعامل معها.",
+    "code": "<pre><code class=\"language-cpp\">#include &lt;iostream&gt;\n#include &lt;string&gt;\nint main() {\n    std::string first = \"Hello\";\n    std::string name = \"Ali\";\n    std::string message = first + \" \" + name;\n    std::cout &lt;&lt; message &lt;&lt; \"\n\";\n    std::cout &lt;&lt; message.size();\n}</code></pre>",
+    "examples": "اطلب الاسم بـ getline ثم اطبع عدد الأحرف، وادمجه مع رسالة ترحيب.",
+    "question": "ما الدالة المناسبة للحصول على طول std::string؟",
+    "answers": [
+      [
+        "A",
+        "lengthOf()",
+        false
+      ],
+      [
+        "B",
+        "size()",
+        true
+      ],
+      [
+        "C",
+        "count()",
+        false
+      ],
+      [
+        "D",
+        "chars()",
+        false
+      ]
+    ],
+    "explain": "size() تعطي عدد الأحرف المخزنة في std::string."
+  },
+  "13": {
+    "title": "Functions — الدوال",
+    "duration": "45 دقيقة",
+    "objective": "تقسيم البرنامج إلى وظائف صغيرة قابلة لإعادة الاستخدام.",
+    "theory": "الدالة مجموعة أوامر تحمل اسمًا ويمكن استدعاؤها. قد تستقبل Parameters وتعيد قيمة بـ return. تقسيم البرامج إلى دوال يحسن القراءة والاختبار وإعادة الاستخدام.",
+    "simple": "الدالة مثل آلة صغيرة: تعطيها مدخلات، تنفذ مهمة، وقد تعيد نتيجة.",
+    "code": "<pre><code class=\"language-cpp\">int add(int a, int b) {\n    return a + b;\n}\n\nint main() {\n    int result = add(4, 6);\n    std::cout &lt;&lt; result;\n    return 0;\n}</code></pre>",
+    "examples": "اكتب دالة isEven تعيد true إذا كان الرقم زوجيًا، ثم استخدمها لفحص عدة أرقام.",
+    "question": "ما الكلمة المستخدمة لإرجاع قيمة من الدالة؟",
+    "answers": [
+      [
+        "A",
+        "give",
+        false
+      ],
+      [
+        "B",
+        "return",
+        true
+      ],
+      [
+        "C",
+        "back",
+        false
+      ],
+      [
+        "D",
+        "output",
+        false
+      ]
+    ],
+    "explain": "return تعيد قيمة من الدالة إلى المكان الذي استدعاها."
+  }
+}

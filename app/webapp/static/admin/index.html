@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101521" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Tech Academy · Admin</title>
+  <link rel="stylesheet" href="/admin/assets/admin.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div id="auth-wall" class="auth-wall">
+    <div class="auth-card">
+      <div class="brand-mark">TA</div>
+      <div class="eyebrow">TECH ACADEMY · SECURE ADMIN</div>
+      <h1>جارٍ التحقق من صلاحية الوصول</h1>
+      <p id="auth-message">يتم التحقق من جلسة Telegram والصلاحيات قبل تحميل أي بيانات.</p>
+      <div id="auth-progress" class="loader-row"><span class="spinner"></span><span>يرجى الانتظار…</span></div>
+    </div>
+  </div>
+
+  <div id="app-shell" class="app-shell hidden">
+    <aside id="sidebar" class="sidebar">
+      <div class="brand-lockup">
+        <div class="brand-mark">TA</div>
+        <div><div class="brand-name">Tech Academy</div><div class="brand-sub">ADMINISTRATION</div></div>
+        <button id="sidebar-close" class="icon-button sidebar-close" aria-label="إغلاق القائمة">×</button>
+      </div>
+      <div class="workspace-chip"><span class="status-dot"></span><span>مساحة الإدارة</span><span class="chip-mini">LIVE</span></div>
+      <label class="nav-search"><span>⌕</span><input id="nav-search" type="search" placeholder="بحث في الأقسام" aria-label="بحث في الأقسام" /></label>
+      <nav id="navigation" class="navigation" aria-label="أقسام الإدارة"></nav>
+      <div class="sidebar-bottom">
+        <div class="security-note"><span class="shield">◇</span><div><strong>جلسة آمنة</strong><small>Telegram · RBAC</small></div><span class="secure-dot"></span></div>
+        <div class="sidebar-version">ACADEMY ADMIN <span>V1.0</span></div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button id="menu-toggle" class="icon-button menu-toggle" aria-label="فتح القائمة">☰</button>
+        <div class="breadcrumbs"><span>الإدارة</span><span class="crumb-divider">/</span><strong id="crumb-title">لوحة التحكم</strong></div>
+        <div class="topbar-actions">
+          <span class="environment"><i></i> متصل</span>
+          <div class="top-separator"></div>
+          <div class="profile-chip"><div id="profile-avatar" class="avatar">A</div><div><strong id="profile-role">—</strong><small id="profile-id">Telegram Admin</small></div></div>
+        </div>
+      </header>
+      <main id="main-content" class="main-content" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <dialog id="editor-dialog" class="dialog">
+    <form id="editor-form" method="dialog" class="dialog-form">
+      <div class="dialog-top"><div><div class="eyebrow" id="dialog-eyebrow">EDITOR</div><h2 id="dialog-title"></h2></div><button class="icon-button dialog-close" value="cancel" aria-label="إغلاق">×</button></div>
+      <div id="dialog-fields" class="dialog-fields"></div>
+      <div class="dialog-actions"><button class="button button-quiet" value="cancel">إلغاء</button><button id="dialog-submit" class="button button-primary" value="default">حفظ</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="confirm-dialog" class="dialog confirm-dialog">
+    <form id="confirm-form" method="dialog" class="dialog-form">
+      <div class="confirm-icon">!</div><h2 id="confirm-title">تأكيد العملية</h2><p id="confirm-message"></p>
+      <div class="dialog-actions"><button class="button button-quiet" value="cancel">إلغاء</button><button id="confirm-submit" class="button button-danger" value="confirm">تأكيد</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="preview-dialog" class="dialog preview-dialog">
+    <form method="dialog" class="dialog-form"><div class="dialog-top"><div><div class="eyebrow">CONTENT PREVIEW</div><h2 id="preview-title">معاينة الدرس</h2></div><button class="icon-button dialog-close" value="close" aria-label="إغلاق">×</button></div><div id="preview-content" class="preview-body"></div><div class="dialog-actions"><button class="button button-quiet" value="close">إغلاق</button></div></form>
+  </dialog>
+
+  <dialog id="admin-permission-dialog" class="dialog admin-permission-dialog">
+    <form method="dialog" class="dialog-form">
+      <div class="dialog-top"><div><div class="eyebrow">ADMIN ACCESS CONTROL</div><h2 id="admin-permission-title">Permissions المشرف</h2></div><button class="icon-button dialog-close" value="close" aria-label="إغلاق">×</button></div>
+      <div class="admin-permission-add"><label class="field-wrap"><span class="field-label">Permission</span><select id="admin-permission-select" class="field-control"></select></label><button id="admin-permission-grant" class="button button-primary" type="button">منح Permission</button></div>
+      <p class="dialog-help">إزالة الصلاحية تنشئ منعًا فرديًا يعلو على Role؛ وإعادة منحها تعيد الوصول. كل تغيير يسجل في Audit Log.</p>
+      <div id="admin-permission-items" class="admin-permission-items"></div>
+      <div class="dialog-actions"><button class="button button-quiet" value="close">إغلاق</button></div>
+    </form>
+  </dialog>
+
+  <div id="toast-region" class="toast-region" role="status" aria-live="polite"></div>
+  <input id="file-picker" type="file" class="visually-hidden" />
+  <script src="/admin/assets/admin.js?v=20260929-structure-3d" defer></script>
+</body>
+</html>

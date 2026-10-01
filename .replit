@@ -1,0 +1,23 @@
+entrypoint = "main.py"
+modules = ["python-base-3.12"]
+run = "python main.py"
+
+
+[[ports]]
+localPort = 8080
+externalPort = 80
+
+[workflows]
+runButton = "Run Python"
+
+[[workflows.workflow]]
+name = "Run Python"
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+
+[deployment]
+run = ["python", "main.py"]
+deploymentTarget = "cloudrun"

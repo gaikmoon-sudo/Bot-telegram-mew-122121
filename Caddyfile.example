@@ -1,0 +1,5 @@
+# Replace academy.example.com with your real domain.
+# Point the domain's DNS A/AAAA record to the VPS first.
+academy.example.com {
+    reverse_proxy 127.0.0.1:8080
+}
